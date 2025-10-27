@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+.app-container {
+  /* width: 87.5%; */
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+@theme {
+  --color-secondary: #746E66;
+  --color-gray: #8E8E93;
+  --color-brand: #007AFF;
+  --color-line: color-mix(in oklab, #AEAEB2 36%, transparent);
+
+  --font-sans: "SF Pro Display", sans-serif;
+  --font-sf-rounded: "SF Pro Rounded", sans-serif;
+}
+
+@layer components {
+  .glass-effect {
+    @apply border border-white/20 backdrop-blur-sm;
+  }
+
+  /* Hide the scrollbar track */
+  .scroll-hidden::-webkit-scrollbar-track {
+    background-color: transparent; /* Makes the track invisible */
+  }
+
+  /* Optionally, hide the entire scrollbar and still allow scrolling */
+  .scroll-hidden::-webkit-scrollbar {
+    display: none; /* Hides the entire scrollbar */
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/SF-Pro-Display-Semibold') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Display';
+    font-style: italic;
+    font-weight: 600;
+    src: url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/SF-Pro-Rounded-Thin.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/SF-Pro-Rounded-Regular.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/SF-Pro-Rounded-Medium.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 600;
+    src: url('/fonts/SF-Pro-Rounded-Semibold.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'SF Pro Rounded';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/SF-Pro-Rounded-Bold.otf') format('opentype');
+  }
+}
