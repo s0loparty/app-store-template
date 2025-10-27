@@ -26,13 +26,15 @@ body {
   }
 
   /* Hide the scrollbar track */
-  .scroll-hidden::-webkit-scrollbar-track {
-    background-color: transparent; /* Makes the track invisible */
-  }
+  @media screen and (max-width: 768px) {
+    .scroll-hidden::-webkit-scrollbar-track {
+      background-color: transparent; /* Makes the track invisible */
+    }
 
-  /* Optionally, hide the entire scrollbar and still allow scrolling */
-  .scroll-hidden::-webkit-scrollbar {
-    display: none; /* Hides the entire scrollbar */
+    /* Optionally, hide the entire scrollbar and still allow scrolling */
+    .scroll-hidden::-webkit-scrollbar {
+      display: none; /* Hides the entire scrollbar */
+    }
   }
 }
 

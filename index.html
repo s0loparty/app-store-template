@@ -102,7 +102,7 @@
 
 					<a
 						href="#"
-						class="ml-auto h-max w-max rounded-[100px] bg-brand px-5 py-2 leading-[137%] font-bold text-white"
+						class="js-accept ml-auto h-max w-max rounded-[100px] bg-brand px-5 py-2 leading-[137%] font-bold text-white"
 					>
 						Download
 					</a>
@@ -131,7 +131,7 @@
 					<div class="flex items-center gap-x-2">
 						<a
 							href="#"
-							class="rounded-[100px] bg-brand px-5 py-2 leading-[137%] font-bold text-white"
+							class="js-accept rounded-[100px] bg-brand px-5 py-2 leading-[137%] font-bold text-white"
 						>
 							Download
 						</a>
@@ -560,7 +560,7 @@
 				<h3 class="mt-2 text-lg">The most helpful reviews</h3>
 			</div>
 			<div class="scroll-hidden flex flex-nowrap gap-x-2.5 overflow-x-auto px-5 pb-10">
-				<div class="w-[97%] shrink-0 rounded-2xl bg-white p-5 shadow-xl">
+				<div class="w-[97%] max-w-xs shrink-0 rounded-2xl bg-white p-5 shadow-xl">
 					<div class="font-semibold">дистанционка</div>
 					<div class="my-2">
 						<div class="flex items-center gap-x-2">
@@ -649,7 +649,7 @@
 						вопрос вопроса инициал, от всех страну путь!
 					</p>
 				</div>
-				<div class="w-[97%] shrink-0 rounded-2xl bg-white p-5 shadow-xl">
+				<div class="w-[97%] max-w-xs shrink-0 rounded-2xl bg-white p-5 shadow-xl">
 					<div class="font-semibold">дистанционка</div>
 					<div class="my-2">
 						<div class="flex items-center gap-x-2">
@@ -738,7 +738,7 @@
 						вопрос вопроса инициал, от всех страну путь!
 					</p>
 				</div>
-				<div class="w-[97%] shrink-0 rounded-2xl bg-white p-5 shadow-xl">
+				<div class="w-[97%] max-w-xs shrink-0 rounded-2xl bg-white p-5 shadow-xl">
 					<div class="font-semibold">дистанционка</div>
 					<div class="my-2">
 						<div class="flex items-center gap-x-2">
@@ -1037,6 +1037,18 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- disable A links -->
+		<script>
+			document.body.addEventListener('click', (ev) => {
+				const targetLink = ev.target.closest('a');
+
+				if (targetLink && !targetLink.classList.contains('js-accept')) {
+					ev.preventDefault();
+					ev.stopPropagation();
+				}
+			});
+		</script>
 
 		<script>
 			const mainHeader = document.getElementById('main-header');
